@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="Keywords" content=""/>
+	<meta name="Description" content=""/>
+	<title>Document</title>
+	<style type="text/css">
+	#box{
+	    width:1000px;
+		border:1px solid red;
+		margin:50px auto;
+		min-height:100px;
+	}
+	</style>
+</head>
+<body>
+    
+	<div id="box"></div>
+	
+	<script type="text/javascript" src="Table.js"></script>
+	<script type="text/javascript" >
+	    var tableHeader = ["ID","问题","答案","解释","修改时间(时间戳)"];
+		
+		var infoWrap = [{
+		    "id":"20184171300",
+			"question":"我喜欢苹果",
+			"answer":"错",
+			"explain":"我喜欢草莓.",
+			"time":"11111"
+		},{
+		    "id":"20184171303",
+			"question":"你喜欢橙子",
+			"answer":"对",
+			"explain":"是的.",
+			"time":"11111"
+		},{
+		    "id":"20184171303",
+			"question":"你喜欢西瓜",
+			"answer":"对",
+			"explain":"嗯.",
+			"time":"11111"
+		},{
+		    "id":"20184171303",
+			"question":"你喜欢榴莲",
+			"answer":"不",
+			"explain":"我喜欢草莓.",
+			"time":"11111"
+		}];
+		
+		//  实例化表格对象
+		var table = new Table({
+			el			: document.getElementById("box"),
+			tableHeader : tableHeader,
+			content     : infoWrap
+		});
+	</script>
+</body>
+</html>
